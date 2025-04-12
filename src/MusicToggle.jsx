@@ -18,7 +18,8 @@ export function MusicToggle(){
 
     return (
         <button onClick={toggleMusicState} className="MusicToggle">
-            <img src={isPlaying ? Play : Pause} 
+            <img 
+            src={isPlaying ? Play : Pause} 
             alt={isPlaying ? "Play music" : "No music"} 
             className="MusicToggleIcon"/>
         </button>

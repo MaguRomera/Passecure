@@ -1,0 +1,62 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.background{
+    padding: 0px;
+    margin: 0px;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    position: absolute;
+    object-fit: cover;
+    opacity:50%;
+}
+
+.principal-menu{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-cnt{
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    justify-content: center;
+}
+
+.title{
+    color: rgb(221, 221, 205);
+    font-family: "Share Tech Mono", monospace;
+    font-size: 60px;
+}
+
+.MusicToggle{
+    background-color: transparent;
+    border: none;
+    width: 32px;
+    height: 32px;
+    padding: 0px;
+    margin: 0px;
+    margin-left: 20px;
+}
+.MusicToggleIcon {
+    filter: invert(88%) sepia(12%) saturate(302%) hue-rotate(16deg) brightness(98%) contrast(92%);
+}
+.MusicToggleIcon:hover{
+    opacity: 70%;
+}
+  
+
+
+
