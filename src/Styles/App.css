@@ -1,5 +1,6 @@
 :root { /*variables de colores*/
     --darkgreen: #024702;
+    --neongreen: #04ff04;
 }
 
 body{
@@ -22,14 +23,6 @@ body{
     opacity:50%;
 }
 
-.principal-menu{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-}
-
 .title-cnt{
     display: flex;
     flex-direction: row; 
@@ -40,17 +33,16 @@ body{
 .title{
     color: rgb(221, 221, 205);
     font-family: "Share Tech Mono", monospace;
-    font-size: 60px;
+    font-size: 50px;
 }
-
+/*buttons*/
 .MusicToggle{
     background-color: transparent;
     border: none;
     width: 32px;
     height: 32px;
     padding: 0px;
-    margin: 0px;
-    margin-left: 20px;
+    margin: 15px;
 }
 .MusicToggleIcon {
     filter: invert(88%) sepia(12%) saturate(302%) hue-rotate(16deg) brightness(98%) contrast(92%);
@@ -59,38 +51,13 @@ body{
     opacity: 70%;
 }
 
-.select-cnt{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    row-gap: 15px;
-    width: 300px;
-    height: fit-content;
-}
-.SelectButton{
-    font-family: "Cutive Mono", monospace;
-    font-size: 22px;
-    color: white;
-    width: 300px;
-    height: 60px;
-    background-color: #024702;
-    opacity: 85%;
-    position: relative;
-    border: 1px solid #024702;
-}
-.SelectButton:hover{
-    border-color: beige;
-    transition: 0.2s;
-}
-
 .GitButton{
     background-color: transparent;
     border: none;
     width: 32px;
     height: 32px;
     padding: 0px;
-    margin: 0px;
-    margin-right: 20px;
+    margin: 15px;
 }
 .GitButtonIcon {
     filter: invert(88%) sepia(12%) saturate(302%) hue-rotate(16deg) brightness(98%) contrast(92%);

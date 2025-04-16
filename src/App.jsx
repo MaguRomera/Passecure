@@ -1,23 +1,30 @@
 import './Styles/App.css'
 import {MusicToggle} from './components/MusicToggle.jsx'
 import {GitButton} from './components/GitButton.jsx'
-import {SelectButton} from './components/SelectButton.jsx'
+import { PassAuthenticator } from './components/PassAuthenticator.jsx';
 import Background from "./media/background2.gif";
+import { useState } from 'react';
 export function App(){
+
+    var [hidePassword, sethidePassword] = useState(false)
+
     return(
         <div>
             <img src={Background} className='background'/>
-            <section className='principal-menu'>
-                <header className='title-cnt'>
-                    <GitButton/>
+            <header className='buttons-cnt'>
+                <GitButton/>
+                <MusicToggle/>
+            </header>
+           <div className='father-cnt'>
+                <section className='title-cnt'> 
                     <h1 className='title'>PASSECURE</h1>
-                    <MusicToggle/>
-                </header>
-                <section className='select-cnt'>
-                    <SelectButton title={"Generate password"}/>
-                    <SelectButton title={"Authentication"}/>
                 </section>
-            </section>
+                <section className='password-cnt'>
+                    <PassAuthenticator 
+                        hidePass={hidePassword}
+                    />
+                </section>
+           </div>
         </div>
     )
 }
