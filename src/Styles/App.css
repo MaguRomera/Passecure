@@ -23,6 +23,13 @@ body{
     opacity:50%;
 }
 
+.father-cnt{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .title-cnt{
     display: flex;
     flex-direction: row; 
@@ -33,7 +40,7 @@ body{
 .title{
     color: rgb(221, 221, 205);
     font-family: "Share Tech Mono", monospace;
-    font-size: 50px;
+    font-size: 60px;
 }
 /*buttons*/
 .MusicToggle{
@@ -63,5 +70,46 @@ body{
     filter: invert(88%) sepia(12%) saturate(302%) hue-rotate(16deg) brightness(98%) contrast(92%);
 }
 .GitButtonIcon:hover{
+    opacity: 70%;
+}
+
+/*PASSWORD SECTION*/
+.password-cnt{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 600px;
+    background-color: var(--darkgreen);
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+}
+
+.PasswordAuthenticator{
+    width: 300px;
+    height: 40px;
+    background-color: black;
+    border: none;
+    color: white;
+    font-family: "Cutive Mono", monospace;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 6px;
+}
+
+.HidePass{
+    background-color: transparent;
+    border: none;
+    width: 32px;
+    height: 32px;
+    padding: 0px;
+    margin: 15px;
+}
+.HidePassIcon {
+    filter: invert(88%) sepia(12%) saturate(302%) hue-rotate(16deg) brightness(98%) contrast(92%);
+}
+.HidePassIcon:hover{
     opacity: 70%;
 }

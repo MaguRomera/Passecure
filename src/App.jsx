@@ -4,6 +4,7 @@ import {GitButton} from './components/GitButton.jsx'
 import { PassAuthenticator } from './components/PassAuthenticator.jsx';
 import Background from "./media/background2.gif";
 import { useState } from 'react';
+import { HidePass } from './components/HidePass.jsx';
 export function App(){
 
     var [hidePassword, sethidePassword] = useState(false)
@@ -21,6 +22,10 @@ export function App(){
                 </section>
                 <section className='password-cnt'>
                     <PassAuthenticator 
+                        hidePass={hidePassword}
+                    />
+                    <HidePass
+                        sethidePass={sethidePassword}
                         hidePass={hidePassword}
                     />
                 </section>
