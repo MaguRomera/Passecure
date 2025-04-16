@@ -15,6 +15,7 @@ export function MusicToggle(){
         }
         setIsPlaying(!isPlaying);
     }
+    
 
     return (
         <button onClick={toggleMusicState} className="MusicToggle">
