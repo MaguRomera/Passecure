@@ -1,4 +1,4 @@
-import Git from "./media/Git.svg";
+import Git from "../media/Git.svg";
 
 
 export function GitButton(){

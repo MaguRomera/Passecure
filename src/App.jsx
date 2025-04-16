@@ -1,7 +1,7 @@
 import './Styles/App.css'
-import {MusicToggle} from './MusicToggle.jsx'
-import {GitButton} from './GitButton.jsx'
-import {SelectButton} from './SelectButton.jsx'
+import {MusicToggle} from './components/MusicToggle.jsx'
+import {GitButton} from './components/GitButton.jsx'
+import {SelectButton} from './components/SelectButton.jsx'
 import Background from "./media/background2.gif";
 export function App(){
     return(

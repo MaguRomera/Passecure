@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
-import Play from "./media/Play.svg";
-import Pause from "./media/Pause.svg";
-import BGMusic from "./media/background-music.mp3";
+import Play from "../media/Play.svg";
+import Pause from "../media/Pause.svg";
+import BGMusic from "../media/background-music.mp3";
 
 export function MusicToggle(){
     const [isPlaying, setIsPlaying] = useState(false)
