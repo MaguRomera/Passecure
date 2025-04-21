@@ -51,7 +51,15 @@ body{
     font-size: clamp(3rem, 6vw, 5rem);
 }
 /*buttons*/
-.MusicToggle, .GitButton, .HidePass, .CopyButton, .PassGenerator{
+
+.buttons-cnt{
+    display: flex;
+    flex-direction: row;
+    margin-top: 2rem;
+    margin-left: 3rem;
+    gap: 1rem;
+}
+.MusicToggle, .GitButton, .HidePass, .CopyButton, .PassGenerator, .SettingsButton{
     background-color: transparent;
     border: none;
     width: 2.5rem;
@@ -60,10 +68,10 @@ body{
     margin: 0.7rem;
     cursor: pointer;
 }
-.MusicToggleIcon, .GitButtonIcon, .HidePassIcon, .CopyButtonIcon, .PassGeneratorIcon {
+.MusicToggleIcon, .GitButtonIcon, .HidePassIcon, .CopyButtonIcon, .PassGeneratorIcon, .SettingsButtonIcon {
     filter: invert(88%) sepia(12%) saturate(302%) hue-rotate(16deg) brightness(98%) contrast(92%);
 }
-.MusicToggleIcon:hover, .GitButtonIcon:hover, .HidePassIcon:hover, .CopyButtonIcon:hover, .PassGeneratorIcon:hover{
+.MusicToggleIcon:hover, .GitButtonIcon:hover, .HidePassIcon:hover, .CopyButtonIcon:hover, .PassGeneratorIcon:hover, .SettingsButtonIcon:hover{
     opacity: 70%;
 }
 
@@ -143,6 +151,7 @@ body{
     opacity: 80%;
     align-content: center;
     justify-content: center;
+    padding: 1rem;
 }
 
 .validchar-cnt{
@@ -198,6 +207,7 @@ body{
     font-family: "Cutive Mono", monospace;
     padding: 1rem;
     font-size: var(--base-font);
+    
 }
 
 .text-cnt input[type="number"]{

@@ -9,6 +9,7 @@ import { ValidationSign } from './components/ValidationSign.jsx';
 import { CopyButton } from './components/CopyButton.jsx';
 import { GeneratePassword } from './components/PassGenerator.jsx';
 import { GeneratorParameters } from './components/GeneratorParameters.jsx';
+import { Settings } from './components/SettingsButton.jsx';
 export function App(){
 
     var [hidePassword, sethidePassword] = useState(false)
@@ -50,6 +51,8 @@ export function App(){
     const [checkNumber, setcheckNumber] = useState(true)
     const [checkSymbol, setcheckSymbol] = useState(true)
     const [passLength, setPassLength] = useState(8)
+    //para ocultar los parámetros
+    const [isHidden, setIsHidden] = useState(true)
 
     return(
         <div>
@@ -57,6 +60,10 @@ export function App(){
             <header className='buttons-cnt'>
                 <GitButton/>
                 <MusicToggle/>
+                <Settings
+                    isHidden={isHidden}
+                    setIsHidden={setIsHidden}    
+                />
             </header>
            <div className='father-cnt'>
                 <section className='title-cnt'> 
@@ -105,6 +112,7 @@ export function App(){
                     checkSymbol={checkSymbol}
                     checkNumber={checkNumber}
                     passLength={passLength}
+                    isHidden={isHidden}
                 />
            </div>
         </div>

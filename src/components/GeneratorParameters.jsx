@@ -1,7 +1,7 @@
 export function GeneratorParameters(props){
 
     return(
-        <span className="parameters">
+        <span className="parameters" style={{ display: props.isHidden ? 'none' : 'flex' }}>
             <section className="validchar-cnt">
                 <div className="charcheck">
                     <input type="checkbox" 
