@@ -10,6 +10,7 @@ import { CopyButton } from './components/CopyButton.jsx';
 import { GeneratePassword } from './components/PassGenerator.jsx';
 import { GeneratorParameters } from './components/GeneratorParameters.jsx';
 import { Settings } from './components/SettingsButton.jsx';
+import { DeleteContent } from './components/DeleteButton.jsx';
 export function App(){
 
     var [hidePassword, sethidePassword] = useState(false)
@@ -62,7 +63,7 @@ export function App(){
                 <MusicToggle/>
                 <Settings
                     isHidden={isHidden}
-                    setIsHidden={setIsHidden}    
+                    setIsHidden={setIsHidden} 
                 />
             </header>
            <div className='father-cnt'>
@@ -76,6 +77,10 @@ export function App(){
                             setValidatePass={setValidatePass}
                             setTextInfo={setTextInfo}
                             textInfo={textInfo}
+                            validationFunc={validationFunc}
+                        />
+                        <DeleteContent
+                            setTextInfo={setTextInfo}
                             validationFunc={validationFunc}
                         />
                         <HidePass
