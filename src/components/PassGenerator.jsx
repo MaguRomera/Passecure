@@ -15,7 +15,9 @@ export function GeneratePassword(props){
             result += charArray[Math.floor(Math.random()*charArray.length)]
         }
         props.setTextInfo(result)
+        props.validationFunc(result)
     }
+
     
     //para los ajustes, hacer un if que valide que la condición del usuario se cumpla Y que el caracter coincida
     return (
