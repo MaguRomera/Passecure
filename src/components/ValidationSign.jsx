@@ -3,7 +3,7 @@ import { useState } from "react"
 export function ValidationSign(props){
     
     var validationState = "Unsafe"
-
+    
     if(props.validatePass==0){
         validationState="Unsafe"
     } else if(props.validatePass==1){

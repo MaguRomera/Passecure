@@ -20,7 +20,7 @@ export function App(){
             </header>
            <div className='father-cnt'>
                 <section className='title-cnt'> 
-                    <h1 className='title'>PASSECURE</h1>
+                    <h1 className='title'>P A S S E C U R E</h1>
                 </section>
                 <span className='valipass-cnt'>
                     <section className='password-cnt'>

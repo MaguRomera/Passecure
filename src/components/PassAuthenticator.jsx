@@ -17,16 +17,20 @@ export function PassAuthenticator(props){
         }
         
         var secure = 0
-
+        //validation 
         if(UpperCase>=1 && Number>=1 && Symbol>=1 && password.length>=8) {
            secure=4
         } else if(UpperCase>=1 && Number>=1 && password.length>=8) {
+            secure=3
+        }else if(UpperCase>=1 && Symbol>=1 && password.length>=8) {
+            secure=3
+        }else if(Symbol>=1 && Number>=1 && password.length>=8) {
             secure=3
         }else if(UpperCase>=1 && password.length>=8) {
             secure=2
         }else if(password.length>=8){
             secure=1
-        } else secure=0
+        }else secure=0
 
         props.setValidatePass(secure)
         setisSecure(secure)

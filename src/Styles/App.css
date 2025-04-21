@@ -39,7 +39,8 @@ body{
 
 .title{
     color: rgb(221, 221, 205);
-    font-family: "Share Tech Mono", monospace;
+    font-family: "Tiny5", sans-serif;
+    font-weight: 100;
     font-size: 60px;
 }
 /*buttons*/
@@ -115,3 +116,22 @@ body{
 }
 
 /*Texto de validación*/
+
+.ValidationSign{
+    color: white;
+    font-family: "Cutive Mono", monospace;
+    font-weight: 100;
+    background-color: var(--darkgreen);
+    width: fit-content;
+    height: fit-content;
+    padding: 5px;
+    font-size: 18px;
+    margin-top: 5px;
+    opacity: 80%;
+    cursor: pointer;
+}
+
+.valipass-cnt{
+    display: flex;
+    flex-direction: column;
+}
