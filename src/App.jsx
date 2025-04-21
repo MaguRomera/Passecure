@@ -8,6 +8,7 @@ import { HidePass } from './components/HidePass.jsx';
 import { ValidationSign } from './components/ValidationSign.jsx';
 import { CopyButton } from './components/CopyButton.jsx';
 import { GeneratePassword } from './components/PassGenerator.jsx';
+import { GeneratorParameters } from './components/GeneratorParameters.jsx';
 export function App(){
 
     var [hidePassword, sethidePassword] = useState(false)
@@ -43,6 +44,13 @@ export function App(){
         setValidatePass(secure)
     }
 
+    //funciones para los parámetros
+    const [checkUpper, setcheckUpper] = useState(true)
+    const [checkLower, setcheckLower] = useState(true)
+    const [checkNumber, setcheckNumber] = useState(true)
+    const [checkSymbol, setcheckSymbol] = useState(true)
+    const [passLength, setPassLength] = useState(8)
+
     return(
         <div>
             <img src={Background} className='background'/>
@@ -74,12 +82,30 @@ export function App(){
                             setTextInfo={setTextInfo}
                             validationFunc={validationFunc}
                             setValidatePass={setValidatePass}
+                            checkLower={checkLower}
+                            checkUpper={checkUpper}
+                            checkSymbol={checkSymbol}
+                            checkNumber={checkNumber}
+                            passLength={passLength}
+                
                         />
                     </section>
                     <ValidationSign
                         validatePass={validatePass}
                     />
                 </span>
+                <GeneratorParameters
+                    setcheckUpper={setcheckUpper}
+                    setcheckLower={setcheckLower}
+                    setcheckNumber={setcheckNumber}
+                    setcheckSymbol={setcheckSymbol}
+                    setPassLength={setPassLength}
+                    checkLower={checkLower}
+                    checkUpper={checkUpper}
+                    checkSymbol={checkSymbol}
+                    checkNumber={checkNumber}
+                    passLength={passLength}
+                />
            </div>
         </div>
     )

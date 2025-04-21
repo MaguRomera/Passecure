@@ -1,4 +1,3 @@
-import { useState, useRef } from "react";
 import Eye from "../media/eye.svg";
 import EyeClosed from "../media/eye-closed.svg";
 
@@ -12,7 +11,7 @@ export function HidePass(props){
         onClick={hidePassState}
         title={props.hidePass ? "Hide password" : "Show password"}>
             <img 
-            src={props.hidePass ? Eye : EyeClosed}  
+            src={props.hidePass ? EyeClosed : Eye}  
             className="HidePassIcon"/>
         </button>
     ) 

@@ -1,6 +1,4 @@
-import { useState } from "react";
-
-export function PassAuthenticator(props){
+export function PassInput(props){
 
     return(
         <input 

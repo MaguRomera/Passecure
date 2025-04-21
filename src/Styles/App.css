@@ -84,7 +84,7 @@ body{
 .PasswordAuthenticator{
     min-width: 200px;
     width: 400px;
-    height: 2.8rem;;
+    height: 2.8rem;
     background-color: black;
     border: none;
     color: white;
@@ -128,4 +128,79 @@ body{
     font-size: 16px !important;
     padding: 12px !important;
     opacity: 70% !important;
-  }
+}
+
+/*parámetros de generador*/
+
+.parameters{
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: var(--darkgreen); 
+    width: fit-content;
+    height: fit-content;
+    opacity: 80%;
+    align-content: center;
+    justify-content: center;
+}
+
+.validchar-cnt{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 22vw;
+    color: white;
+    font-family: "Cutive Mono", monospace;
+    border-color: beige;
+    align-content: center;
+    justify-content: center;
+    margin: 0px;
+}
+
+.charcheck{
+    padding: 0.5rem;
+}
+
+.charcheck input[type="checkbox"]{
+    appearance: none;
+    width: 1.2rem;
+    height: 1.2rem;
+    background-color: black;
+    cursor: pointer;
+}
+.charcheck input[type="checkbox"]:checked {
+    background-color: beige;
+    border-color: var(--neongreen);
+}
+.charcheck input[type="checkbox"]::before {
+    content: "✔";
+    color: var(--darkgreen);
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    visibility: hidden;
+}
+
+.charcheck input[type="checkbox"]:checked::before {
+    visibility: visible;
+}
+
+.text-cnt{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: "Cutive Mono", monospace;
+    padding: 1rem;
+    font-size: var(--base-font);
+}
+
+.text-cnt input[type="number"]{
+    width: 3vw;
+    background-color: beige;
+}
