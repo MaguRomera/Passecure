@@ -42,7 +42,11 @@ export function PassAuthenticator(props){
         name="password"
         placeholder="Insert your password..."
         className="PasswordAuthenticator"        
-        onChange={event =>{separateCharacters(event.target.value)}}
+        onChange={event => {
+            const value = event.target.value;
+            separateCharacters(value);
+            props.setTextInfo(value);
+        }}
         />
     )
 }

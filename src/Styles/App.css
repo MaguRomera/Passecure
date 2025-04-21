@@ -44,7 +44,7 @@ body{
     font-size: 60px;
 }
 /*buttons*/
-.MusicToggle{
+.MusicToggle, .GitButton, .HidePass, .CopyButton{
     background-color: transparent;
     border: none;
     width: 32px;
@@ -52,25 +52,10 @@ body{
     padding: 0px;
     margin: 15px;
 }
-.MusicToggleIcon {
+.MusicToggleIcon, .GitButtonIcon, .HidePassIcon, .CopyButtonIcon {
     filter: invert(88%) sepia(12%) saturate(302%) hue-rotate(16deg) brightness(98%) contrast(92%);
 }
-.MusicToggleIcon:hover{
-    opacity: 70%;
-}
-
-.GitButton{
-    background-color: transparent;
-    border: none;
-    width: 32px;
-    height: 32px;
-    padding: 0px;
-    margin: 15px;
-}
-.GitButtonIcon {
-    filter: invert(88%) sepia(12%) saturate(302%) hue-rotate(16deg) brightness(98%) contrast(92%);
-}
-.GitButtonIcon:hover{
+.MusicToggleIcon:hover, .GitButtonIcon:hover, .HidePassIcon:hover, .CopyButtonIcon:hover{
     opacity: 70%;
 }
 
@@ -100,21 +85,6 @@ body{
     padding-left: 6px;
 }
 
-.HidePass{
-    background-color: transparent;
-    border: none;
-    width: 32px;
-    height: 32px;
-    padding: 0px;
-    margin: 15px;
-}
-.HidePassIcon {
-    filter: invert(88%) sepia(12%) saturate(302%) hue-rotate(16deg) brightness(98%) contrast(92%);
-}
-.HidePassIcon:hover{
-    opacity: 70%;
-}
-
 /*Texto de validación*/
 
 .ValidationSign{
@@ -135,3 +105,13 @@ body{
     display: flex;
     flex-direction: column;
 }
+
+/*toast noti custom*/
+
+.toast-custom {
+    background-color: var(--darkgreen) !important;
+    color: white !important;
+    font-family: "Cutive Mono", monospace !important;
+    font-size: 16px !important;
+    padding: 12px !important;
+  }

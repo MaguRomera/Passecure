@@ -6,10 +6,12 @@ import Background from "./media/background2.gif";
 import { useState } from 'react';
 import { HidePass } from './components/HidePass.jsx';
 import { ValidationSign } from './components/ValidationSign.jsx';
+import { CopyButton } from './components/CopyButton.jsx';
 export function App(){
 
     var [hidePassword, sethidePassword] = useState(false)
     var [validatePass, setValidatePass] = useState(0)
+    var [textInfo, setTextInfo] = useState("")
 
     return(
         <div>
@@ -27,10 +29,14 @@ export function App(){
                         <PassAuthenticator 
                             hidePass={hidePassword}
                             setValidatePass={setValidatePass}
+                            setTextInfo={setTextInfo}
                         />
                         <HidePass
                             sethidePass={sethidePassword}
                             hidePass={hidePassword}
+                        />
+                        <CopyButton
+                            textInfo={textInfo}
                         />
                     </section>
                     <ValidationSign
