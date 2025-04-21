@@ -1,6 +1,7 @@
 :root { /*variables de colores*/
     --darkgreen: #024702;
     --neongreen: #04ff04;
+    --base-font: clamp(1rem, 2vw, 1.5rem);
 }
 
 body{
@@ -8,7 +9,9 @@ body{
     padding: 0px;
     background-color: black;
     min-height: 100vh;
-    overflow: hidden;
+    width: 100vw;
+    overflow-x: hidden;
+    font-size: var(--base-font);
 }
 
 .background{
@@ -28,6 +31,8 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    min-height: 70vh;
+    width: 100%;
 }
 
 .title-cnt{
@@ -35,27 +40,30 @@ body{
     flex-direction: row; 
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
+    padding: 1rem;
 }
 
 .title{
     color: rgb(221, 221, 205);
     font-family: "Tiny5", sans-serif;
     font-weight: 100;
-    font-size: 60px;
+    font-size: clamp(3rem, 6vw, 5rem);
 }
 /*buttons*/
-.MusicToggle, .GitButton, .HidePass, .CopyButton{
+.MusicToggle, .GitButton, .HidePass, .CopyButton, .PassGenerator{
     background-color: transparent;
     border: none;
-    width: 32px;
-    height: 32px;
-    padding: 0px;
-    margin: 15px;
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0;
+    margin: 0.7rem;
+    cursor: pointer;
 }
-.MusicToggleIcon, .GitButtonIcon, .HidePassIcon, .CopyButtonIcon {
+.MusicToggleIcon, .GitButtonIcon, .HidePassIcon, .CopyButtonIcon, .PassGeneratorIcon {
     filter: invert(88%) sepia(12%) saturate(302%) hue-rotate(16deg) brightness(98%) contrast(92%);
 }
-.MusicToggleIcon:hover, .GitButtonIcon:hover, .HidePassIcon:hover, .CopyButtonIcon:hover{
+.MusicToggleIcon:hover, .GitButtonIcon:hover, .HidePassIcon:hover, .CopyButtonIcon:hover, .PassGeneratorIcon:hover{
     opacity: 70%;
 }
 
@@ -64,25 +72,29 @@ body{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 600px;
+    width: 32vw;
+    max-width: 700px;
+    height: auto;
+    padding: 0.2rem;
     background-color: var(--darkgreen);
-    height: 60px;
     align-items: center;
     justify-content: center;
 }
 
 .PasswordAuthenticator{
-    width: 300px;
-    height: 40px;
+    min-width: 200px;
+    width: 400px;
+    height: 2.8rem;;
     background-color: black;
     border: none;
     color: white;
     font-family: "Cutive Mono", monospace;
-    font-size: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-left: 6px;
+    font-size: 1rem;
+    padding-left: 0.5rem;
+
 }
 
 /*Texto de validación*/
@@ -94,9 +106,10 @@ body{
     background-color: var(--darkgreen);
     width: fit-content;
     height: fit-content;
-    padding: 5px;
-    font-size: 18px;
-    margin-top: 5px;
+    width: fit-content;
+    padding: 0.5rem;
+    font-size: 1rem;
+    margin-top: 0.5rem;
     opacity: 80%;
     cursor: pointer;
 }

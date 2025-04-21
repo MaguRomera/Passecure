@@ -9,7 +9,8 @@ export function GitButton(){
         <button onClick={goTo} className="GitButton">
             <img 
             src={Git} 
-            className="GitButtonIcon"/>
+            className="GitButtonIcon"
+            title="Meet THE CREATOR"/>
         </button>
     )
 

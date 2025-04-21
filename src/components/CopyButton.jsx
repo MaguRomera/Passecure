@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Copy from "../media/Copy.svg";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -12,15 +11,14 @@ export function CopyButton(props){
             {className: 'toast-custom', autoClose: 1000}, 
         );
     }
-
-
     return (
         <div>
             <button onClick={copyText} 
                 className="CopyButton">
                 <img 
                 src={Copy} 
-                className="CopyButtonIcon"/>
+                className="CopyButtonIcon"
+                title={"Copy"}/>
             </button>
             <ToastContainer />
         </div>

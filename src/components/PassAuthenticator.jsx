@@ -13,7 +13,7 @@ export function PassAuthenticator(props){
             if (/[A-Z]/.test(char)) UpperCase++
             else if (/[a-z]/.test(char)) LowCase++
             else if (/[0-9]/.test(char)) Number++
-            else if (/[\_\?\*\!\.\$\@\#\+\,\=\&]/.test(char)) Symbol++
+            else if (/[\_\?\*\!\.\$\@\#\+\,\=\&\%]/.test(char)) Symbol++
         }
         
         var secure = 0
@@ -41,11 +41,12 @@ export function PassAuthenticator(props){
         type={props.hidePass ? "text" : "password"}
         name="password"
         placeholder="Insert your password..."
-        className="PasswordAuthenticator"        
+        className="PasswordAuthenticator"  
+        value={props.textInfo}      
         onChange={event => {
             const value = event.target.value;
-            separateCharacters(value);
             props.setTextInfo(value);
+            separateCharacters(value);
         }}
         />
     )

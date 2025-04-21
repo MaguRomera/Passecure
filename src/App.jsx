@@ -7,11 +7,12 @@ import { useState } from 'react';
 import { HidePass } from './components/HidePass.jsx';
 import { ValidationSign } from './components/ValidationSign.jsx';
 import { CopyButton } from './components/CopyButton.jsx';
+import { GeneratePassword } from './components/PassGenerator.jsx';
 export function App(){
 
     var [hidePassword, sethidePassword] = useState(false)
     var [validatePass, setValidatePass] = useState(0)
-    var [textInfo, setTextInfo] = useState("")
+    var [textInfo, setTextInfo] = useState('')
 
     return(
         <div>
@@ -30,6 +31,7 @@ export function App(){
                             hidePass={hidePassword}
                             setValidatePass={setValidatePass}
                             setTextInfo={setTextInfo}
+                            textInfo={textInfo}
                         />
                         <HidePass
                             sethidePass={sethidePassword}
@@ -37,6 +39,9 @@ export function App(){
                         />
                         <CopyButton
                             textInfo={textInfo}
+                        />
+                        <GeneratePassword
+                            setTextInfo={setTextInfo}
                         />
                     </section>
                     <ValidationSign
