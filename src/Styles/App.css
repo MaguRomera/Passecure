@@ -62,8 +62,8 @@ body{
 .MusicToggle, .GitButton, .HidePass, .CopyButton, .PassGenerator, .SettingsButton, .DeleteButton{
     background-color: transparent;
     border: none;
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 2rem;
+    height: 2rem;
     padding: 0;
     margin: 0.7rem;
     cursor: pointer;
@@ -81,9 +81,9 @@ body{
     flex-direction: row;
     flex-wrap: wrap;
     width: 36vw;
-    max-width: 750px;
+    max-width: 450px;
     height: auto;
-    padding: 0.2rem;
+    padding: 0.5rem;
     background-color: var(--darkgreen);
     align-items: center;
     justify-content: center;
@@ -91,7 +91,7 @@ body{
 
 .PasswordAuthenticator{
     min-width: 200px;
-    width: 400px;
+    width: 450px;
     height: 2.8rem;
     background-color: black;
     border: none;
