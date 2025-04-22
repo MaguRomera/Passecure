@@ -12,21 +12,22 @@ export function GeneratePassword(props){
         ];
     
         let result = ""
+        //validación x si no marcan nada
+        if (!props.checkUpper && !props.checkLower && !props.checkSymbol && !props.checkNumber) {
+            toast.error("Select at least one parameter", {
+                className: 'toast-custom',
+                autoClose: 1500,
+                hideProgressBar: true
+            });
+            return;
+        }
         
         for (let i=0; i<props.passLength; i++){ 
             
             let char = charArray[Math.floor(Math.random()*charArray.length)]
                      
-            
             //condiciones de validación
-            if (props.checkUpper==false, props.checkLower==false, props.checkSymbol==false, props.checkNumber==false){
-                toast.error("Select at least one parameter", {
-                    className: 'toast-custom', 
-                    autoClose: 1500,
-                    hideProgressBar: true
-                })
-                break
-            } else if(props.checkUpper && /[A-Z]/.test(char)){
+            if(props.checkUpper && /[A-Z]/.test(char)){
                 result+=char
             }else if (props.checkLower && /[a-z]/.test(char)){
                 result+=char
