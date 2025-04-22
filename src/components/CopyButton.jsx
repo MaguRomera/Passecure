@@ -8,7 +8,9 @@ export function CopyButton(props){
         navigator.clipboard.writeText(props.textInfo)
         toast.success(
             'Copied!', 
-            {className: 'toast-custom', autoClose: 1000}, 
+            {className: 'toast-custom', 
+            autoClose: 1500,
+            hideProgressBar: true} 
         );
     }
     return (
