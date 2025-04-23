@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import Play from "../media/Play.svg";
 import Pause from "../media/Pause.svg";
 import BGMusic from "../media/background-music.mp3";
@@ -6,7 +6,11 @@ import BGMusic from "../media/background-music.mp3";
 export function MusicToggle(){
     const [isPlaying, setIsPlaying] = useState(false)
     const audioRef = useRef(new Audio(BGMusic))
-    audioRef.loop = true
+    
+    useEffect(() => {
+        audioRef.current.loop = true;
+    }, []);
+
     const toggleMusicState = () => {
         const audio = audioRef.current
         if (isPlaying){
