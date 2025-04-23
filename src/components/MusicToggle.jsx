@@ -6,6 +6,7 @@ import BGMusic from "../media/background-music.mp3";
 export function MusicToggle(){
     const [isPlaying, setIsPlaying] = useState(false)
     const audioRef = useRef(new Audio(BGMusic))
+    audioRef.loop = true
     const toggleMusicState = () => {
         const audio = audioRef.current
         if (isPlaying){
