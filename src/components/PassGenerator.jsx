@@ -21,6 +21,15 @@ export function GeneratePassword(props){
             });
             return;
         }
+        //validación para el length de la contraseña
+        if(props.passLength>25 || props.passLength<8){
+            toast.error("Length values must be between 8 and 25", {
+                className: 'toast-custom',
+                autoClose: 1500,
+                hideProgressBar: true
+            });
+            return;
+        }
         
         for (let i=0; i<props.passLength; i++){ 
             
