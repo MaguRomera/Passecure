@@ -8,7 +8,7 @@ body{
     margin: 0px;
     padding: 0px;
     background-color: black;
-    min-height: 100vh;
+    min-height: 100svh;
     width: 100vw;
     overflow-x: hidden;
     font-size: var(--base-font);
@@ -19,7 +19,7 @@ body{
     margin: 0px;
     z-index: -1;
     width: 100vw;
-    height: 100vh;
+    height: 100svh;
     display: flex;
     position: absolute;
     object-fit: cover;
@@ -55,8 +55,8 @@ body{
 .buttons-cnt{
     display: flex;
     flex-direction: row;
-    margin-top: 2rem;
-    margin-left: 3rem;
+    padding-top: 2rem;
+    padding-left: 3rem;
     gap: 1rem;
 }
 .MusicToggle, .GitButton, .HidePass, .CopyButton, .PassGenerator, .SettingsButton, .DeleteButton{
@@ -80,21 +80,28 @@ body{
 /*PASSWORD SECTION*/
 .password-cnt{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
-    width: 36vw;
-    max-width: 450px;
-    min-width: fit-content;
+    width: 30vw;
+    max-width: fit-content;
+    min-width: 30vw;
     height: auto;
     padding: 0.5rem;
     background-color: var(--darkgreen);
     align-items: center;
     justify-content: center;
 }
+.passbuttons-cnt{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
 
 .PasswordAuthenticator{
-    min-width: 100px;
-    max-width: 450px;
+    width: 28vw;
+    max-width: 30vw;
     height: 2.8rem;
     background-color: black;
     border: none;
@@ -218,3 +225,30 @@ body{
     min-width: 5vw;
     background-color: beige;
 }
+
+/*media query p responsividad mobile*/
+@media screen and (max-width: 768px) {
+    .password-cnt {
+      width: 80vw;
+      min-width: unset;
+      max-width: unset;
+    }
+  
+    .PasswordAuthenticator {
+      width: 75vw;
+      max-width: unset;
+    }
+  
+    .validchar-cnt {
+      width: 70vw;
+    }
+
+    .parameters{
+        width: 70VW;
+    }
+  
+    .text-cnt input[type="number"] {
+      max-width: 20vw;
+      min-width: 15vw;
+    }
+  }

@@ -79,7 +79,8 @@ export function App(){
                             textInfo={textInfo}
                             validationFunc={validationFunc}
                         />
-                        <DeleteContent
+                       <span className='passbuttons-cnt'>
+                       <DeleteContent
                             setTextInfo={setTextInfo}
                             validationFunc={validationFunc}
                         />
@@ -101,6 +102,7 @@ export function App(){
                             passLength={passLength}
                 
                         />
+                       </span>
                     </section>
                     <ValidationSign
                         validatePass={validatePass}
